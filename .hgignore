@@ -7,3 +7,4 @@ Build/*
 *.suo
 *.user
 Src/Umbraco/*
+Src/UmBristol.PageStateIcons/UmBristol.PageStateIcons.Publish.xml
