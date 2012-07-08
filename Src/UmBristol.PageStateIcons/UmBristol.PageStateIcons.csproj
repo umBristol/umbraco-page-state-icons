@@ -67,7 +67,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppBase.cs" />
     <Compile Include="Application.cs" />
     <Compile Include="Config\ConfigurationSection.csd.cs">
       <DependentUpon>ConfigurationSection.csd</DependentUpon>
@@ -83,6 +82,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Umbraco\Plugins\PageStateIcons\umbracoInternalRedirectId.png" />
     <Content Include="Umbraco\Plugins\PageStateIcons\umbracoNaviHide.png" />
     <Content Include="Umbraco\Plugins\PageStateIcons\umbracoRedirect.png" />
     <None Include="Config\ConfigurationSection.csd">
@@ -99,10 +99,8 @@
       <DependentUpon>ConfigurationSection.csd</DependentUpon>
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Config\UmBristol.PageStateIcons.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Umbraco\Plugins\PageStateIcons\CssResourceHandler.ashx" />
+    <Content Include="Config\PageStateIcons.config" />
     <None Include="web.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>

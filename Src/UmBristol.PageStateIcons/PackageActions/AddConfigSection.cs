@@ -29,7 +29,7 @@ namespace UmBristol.PageStateIcons.PackageActions
 				{
 					webConfig.Sections.Add(sectionName, new PageStateIconsConfigurationSection());
 
-					string configPath = string.Concat("config", Path.DirectorySeparatorChar, "UmBristol.PageStateIcons.config");
+					string configPath = string.Concat("config", Path.DirectorySeparatorChar, "PageStateIcons.config");
 					string xmlPath = IOHelper.MapPath(string.Concat("~/", configPath));
 					string xml;
 
