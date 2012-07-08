@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmBristol.PageStateIcons", "Src\UmBristol.PageStateIcons\UmBristol.PageStateIcons.csproj", "{33639D18-FA0B-4A52-9569-CDF437A87FE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C0A8BDDE-A89F-4341-8912-A7C05E5CC25F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Package", "Build Package", "{0F945291-F264-44AF-9C6A-B1BB0B9E785E}"
+	ProjectSection(SolutionItems) = preProject
+		Package.build.cmd = Package.build.cmd
+		Package.build.xml = Package.build.xml
+		Package.xml = Package.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Umbraco Assemblies", "Umbraco Assemblies", "{04F1C33F-EF3D-4F85-90B6-D258F06752D7}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\businesslogic.dll = Lib\businesslogic.dll
+		Lib\ClientDependency.Core.dll = Lib\ClientDependency.Core.dll
+		Lib\cms.dll = Lib\cms.dll
+		Lib\controls.dll = Lib\controls.dll
+		Lib\interfaces.dll = Lib\interfaces.dll
+		Lib\umbraco.DataLayer.dll = Lib\umbraco.DataLayer.dll
+		Lib\umbraco.dll = Lib\umbraco.dll
+		Lib\umbraco.editorControls.dll = Lib\umbraco.editorControls.dll
+		Lib\umbraco.MacroEngines.dll = Lib\umbraco.MacroEngines.dll
+		Lib\umbraco.macroRenderings.dll = Lib\umbraco.macroRenderings.dll
+		Lib\umbraco.providers.dll = Lib\umbraco.providers.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{33639D18-FA0B-4A52-9569-CDF437A87FE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33639D18-FA0B-4A52-9569-CDF437A87FE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33639D18-FA0B-4A52-9569-CDF437A87FE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33639D18-FA0B-4A52-9569-CDF437A87FE2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0F945291-F264-44AF-9C6A-B1BB0B9E785E} = {C0A8BDDE-A89F-4341-8912-A7C05E5CC25F}
+		{04F1C33F-EF3D-4F85-90B6-D258F06752D7} = {C0A8BDDE-A89F-4341-8912-A7C05E5CC25F}
+	EndGlobalSection
+EndGlobal
