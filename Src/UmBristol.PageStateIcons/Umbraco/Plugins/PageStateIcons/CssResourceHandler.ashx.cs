@@ -24,7 +24,7 @@ namespace UmBristol.PageStateIcons
             foreach (Config.RuleElement rule in Config.PageStateIconsConfigurationSection.Instance.Rules)
             {
                 zIndex += 1;
-                
+
                 sb.AppendFormat(".overlay-{0} ", rule.Name);
                 sb.Append("{");
                 sb.AppendFormat("left: {0}px; ", rule.Left);
