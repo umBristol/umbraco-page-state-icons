@@ -32,7 +32,7 @@ namespace UmBristol.PageStateIcons
             {
                 zindex += 1;
 
-                sb.AppendFormat(".overlay-{0} ", rule.Name);
+                sb.AppendFormat("div.overlay-{0} ", rule.Name);
                 sb.Append("{");
                 sb.AppendFormat("left: {0}px; ", rule.Left);
                 sb.AppendFormat("top: {0}px; ", rule.Top);
