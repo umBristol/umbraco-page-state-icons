@@ -44,7 +44,7 @@
 
 	<!-- COMPILE -->
 	<Target Name="Compile" DependsOnTargets="Clean">
-		<MSBuild Projects="$(ProjectDir)\UmBristol.PageStateIcons.csproj" />
+		<MSBuild Projects="$(ProjectDir)\UmBristol.PageStateIcons.csproj" Properties="Configuration=Release" />
 	</Target>
 
 	<!-- PREPAIRE FILES -->
