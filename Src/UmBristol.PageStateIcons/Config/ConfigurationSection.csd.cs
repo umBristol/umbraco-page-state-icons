@@ -447,5 +447,57 @@ namespace UmBristol.PageStateIcons.Config
             }
         }
         #endregion
+        
+        #region Top Property
+        /// <summary>
+        /// The XML name of the <see cref="Top"/> property.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        internal const string TopPropertyName = "top";
+        
+        /// <summary>
+        /// Gets or sets the Top.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [global::System.ComponentModel.DescriptionAttribute("The Top.")]
+        [global::System.Configuration.ConfigurationPropertyAttribute(global::UmBristol.PageStateIcons.Config.RuleElement.TopPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false)]
+        public virtual int Top
+        {
+            get
+            {
+                return ((int)(base[global::UmBristol.PageStateIcons.Config.RuleElement.TopPropertyName]));
+            }
+            set
+            {
+                base[global::UmBristol.PageStateIcons.Config.RuleElement.TopPropertyName] = value;
+            }
+        }
+        #endregion
+        
+        #region Left Property
+        /// <summary>
+        /// The XML name of the <see cref="Left"/> property.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        internal const string LeftPropertyName = "left";
+        
+        /// <summary>
+        /// Gets or sets the Left.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [global::System.ComponentModel.DescriptionAttribute("The Left.")]
+        [global::System.Configuration.ConfigurationPropertyAttribute(global::UmBristol.PageStateIcons.Config.RuleElement.LeftPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false)]
+        public virtual int Left
+        {
+            get
+            {
+                return ((int)(base[global::UmBristol.PageStateIcons.Config.RuleElement.LeftPropertyName]));
+            }
+            set
+            {
+                base[global::UmBristol.PageStateIcons.Config.RuleElement.LeftPropertyName] = value;
+            }
+        }
+        #endregion
     }
 }
