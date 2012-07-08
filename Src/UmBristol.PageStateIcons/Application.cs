@@ -41,7 +41,7 @@ namespace UmBristol.PageStateIcons
 			}
 
 			// if we have an XML node...
-			if (xmlNode != null)
+			if (xmlNode != null && PageStateIconsConfigurationSection.Instance != null)
 			{
 				// ... match rules
 				foreach (RuleElement rule in PageStateIconsConfigurationSection.Instance.Rules)
