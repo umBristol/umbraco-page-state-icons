@@ -3,17 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
+    <ProductVersion>10.0.20723</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{33639D18-FA0B-4A52-9569-CDF437A87FE2}</ProjectGuid>
+    <ProjectGuid>{7C0D088B-281E-4C22-B30E-B365271F7CCD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UmBristol.PageStateIcons</RootNamespace>
-    <AssemblyName>UmBristol.PageStateIcons</AssemblyName>
+    <RootNamespace>UmBristol.PageStateIcons.Config</RootNamespace>
+    <AssemblyName>UmBristol.PageStateIcons.Config</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <Nonshipping>true</Nonshipping>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,30 +32,39 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigurationSection.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigurationSection.csd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\UmBristol.PageStateIcons.config" />
+    <None Include="ConfigurationSection.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>ConfigurationSection.csd.cs</LastGenOutput>
+    </None>
+    <None Include="ConfigurationSection.csd.config">
+      <DependentUpon>ConfigurationSection.csd</DependentUpon>
+    </None>
+    <None Include="ConfigurationSection.csd.diagram">
+      <DependentUpon>ConfigurationSection.csd</DependentUpon>
+    </None>
+    <None Include="ConfigurationSection.csd.xsd">
+      <DependentUpon>ConfigurationSection.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UmBristol.PageStateIcons.Config\UmBristol.PageStateIcons.Config.csproj">
-      <Project>{7C0D088B-281E-4C22-B30E-B365271F7CCD}</Project>
-      <Name>UmBristol.PageStateIcons.Config</Name>
-    </ProjectReference>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Config\" />
-    <Folder Include="Umbraco\Plugins\PageStateIcons\" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
