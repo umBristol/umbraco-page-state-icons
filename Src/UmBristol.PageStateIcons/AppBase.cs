@@ -17,10 +17,15 @@
             if (node.NodeType != "content") return;
 
             var contentNode = new Node(Convert.ToInt32(node.NodeID));
+            //TODO - logic for if node isn't published to use document instead
 
-            if (contentNode.Properties["umbracoNaviHide"] != null)
-                if (contentNode.Properties["umbracoNaviHide"].ToString() == "1")
-                    node.Style.AddCustom("overlay-hidden");
+            foreach (Config.RuleElement rule in Config.PageStateIconsConfigurationSection.Instance.Rules)
+            {
+                // using r.name everywhere but this will change to relevant property
+                if (contentNode.Properties[rule.Name] != null)
+                    if (contentNode.Properties[rule.Name].ToString() == "1") // this is where the xpath magic will happen...
+                        node.Style.AddCustom(String.Format("overlay-{0}", rule.Name)); // should this automatically add the overlay bit?
+            }
         }
     }
 }
