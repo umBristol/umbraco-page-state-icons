@@ -395,5 +395,57 @@ namespace UmBristol.PageStateIcons.Config
             }
         }
         #endregion
+        
+        #region OverlayIconPath Property
+        /// <summary>
+        /// The XML name of the <see cref="OverlayIconPath"/> property.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        internal const string OverlayIconPathPropertyName = "overlayIconPath";
+        
+        /// <summary>
+        /// Gets or sets the OverlayIconPath.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [global::System.ComponentModel.DescriptionAttribute("The OverlayIconPath.")]
+        [global::System.Configuration.ConfigurationPropertyAttribute(global::UmBristol.PageStateIcons.Config.RuleElement.OverlayIconPathPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false)]
+        public virtual string OverlayIconPath
+        {
+            get
+            {
+                return ((string)(base[global::UmBristol.PageStateIcons.Config.RuleElement.OverlayIconPathPropertyName]));
+            }
+            set
+            {
+                base[global::UmBristol.PageStateIcons.Config.RuleElement.OverlayIconPathPropertyName] = value;
+            }
+        }
+        #endregion
+        
+        #region Description Property
+        /// <summary>
+        /// The XML name of the <see cref="Description"/> property.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        internal const string DescriptionPropertyName = "description";
+        
+        /// <summary>
+        /// Gets or sets the Description.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
+        [global::System.ComponentModel.DescriptionAttribute("The Description.")]
+        [global::System.Configuration.ConfigurationPropertyAttribute(global::UmBristol.PageStateIcons.Config.RuleElement.DescriptionPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false)]
+        public virtual string Description
+        {
+            get
+            {
+                return ((string)(base[global::UmBristol.PageStateIcons.Config.RuleElement.DescriptionPropertyName]));
+            }
+            set
+            {
+                base[global::UmBristol.PageStateIcons.Config.RuleElement.DescriptionPropertyName] = value;
+            }
+        }
+        #endregion
     }
 }

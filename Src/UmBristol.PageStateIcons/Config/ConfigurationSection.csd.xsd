@@ -50,5 +50,15 @@
 				<xs:documentation>The CssClass.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="overlayIconPath" use="optional" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The OverlayIconPath.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="description" use="optional" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>The Description.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 </xs:schema>
