@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,20 +43,37 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\ConfigurationSection.csd.cs">
+      <DependentUpon>ConfigurationSection.csd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Config\UmBristol.PageStateIcons.config" />
+    <None Include="Config\ConfigurationSection.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>ConfigurationSection.csd.cs</LastGenOutput>
+    </None>
+    <None Include="Config\ConfigurationSection.csd.config">
+      <DependentUpon>ConfigurationSection.csd</DependentUpon>
+    </None>
+    <None Include="Config\ConfigurationSection.csd.diagram">
+      <DependentUpon>ConfigurationSection.csd</DependentUpon>
+    </None>
+    <None Include="Config\ConfigurationSection.csd.xsd">
+      <DependentUpon>ConfigurationSection.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Config\UmBristol.PageStateIcons.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UmBristol.PageStateIcons.Config\UmBristol.PageStateIcons.Config.csproj">
-      <Project>{7C0D088B-281E-4C22-B30E-B365271F7CCD}</Project>
-      <Name>UmBristol.PageStateIcons.Config</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Config\" />
     <Folder Include="Umbraco\Plugins\PageStateIcons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
