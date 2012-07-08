@@ -60,5 +60,15 @@
 				<xs:documentation>The Description.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="top" use="optional" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>The Top.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="left" use="optional" type="xs:int">
+			<xs:annotation>
+				<xs:documentation>The Left.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
 </xs:schema>
