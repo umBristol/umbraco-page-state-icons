@@ -48,6 +48,7 @@
     <Reference Include="interfaces">
       <HintPath>..\..\Lib\interfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
@@ -68,11 +69,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppBase.cs" />
+    <Compile Include="Application.cs" />
     <Compile Include="Config\ConfigurationSection.csd.cs">
       <DependentUpon>ConfigurationSection.csd</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Filters\InjectResources.cs" />
+    <Compile Include="Modules\RegisterClientResources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Umbraco\Plugins\PageStateIcons\CssResourceHandler.ashx.cs">
       <DependentUpon>CssResourceHandler.ashx</DependentUpon>
@@ -98,12 +102,12 @@
     </Content>
     <Content Include="Umbraco\Plugins\PageStateIcons\CssResourceHandler.ashx" />
     <None Include="web.config" />
-    <Content Include="web.Debug.config">
+    <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
-    </Content>
-    <Content Include="web.Release.config">
+    </None>
+    <None Include="web.Release.config">
       <DependentUpon>web.config</DependentUpon>
-    </Content>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
