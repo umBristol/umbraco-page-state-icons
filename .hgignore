@@ -1,0 +1,8 @@
+syntax: glob
+_ReSharper.*
+Build/*
+*/bin/*
+*/obj/*
+*.csproj.user
+*.suo
+*.user
