@@ -76,6 +76,7 @@
     </Compile>
     <Compile Include="Filters\InjectResources.cs" />
     <Compile Include="Modules\RegisterClientResources.cs" />
+    <Compile Include="PackageActions\AddConfigSection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Umbraco\Plugins\PageStateIcons\CssResourceHandler.ashx.cs">
       <DependentUpon>CssResourceHandler.ashx</DependentUpon>
