@@ -52,7 +52,7 @@
 		<ItemGroup>
 			<BinFiles Include="$(ProjectDir)\Bin\*.dll" />
 			<BinFiles Include="$(ProjectDir)\Bin\*.xml" />
-			<ConfigFiles Include="$(ProjectDir)\Config\*.config" />
+			<ConfigFiles Include="$(ProjectDir)\Config\PageStateIcons.config" />
 			<PluginFiles Include="$(ProjectDir)\Umbraco\Plugins\PageStateIcons\*.ashx" />
 			<ImageFiles Include="$(ProjectDir)\Umbraco\Plugins\PageStateIcons\*.png" />
 			<PackageFile Include="$(RootDir)\Package.xml" />
