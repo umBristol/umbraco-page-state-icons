@@ -13,10 +13,10 @@ namespace UmBristol.PageStateIcons.Modules
 
 		public void Init(HttpApplication context)
 		{
-			context.PostReleaseRequestState += new EventHandler(this.context_PostReleaseRequestState);
+			context.PostMapRequestHandler += new EventHandler(this.context_PostMapRequestHandler);
 		}
 
-		private void context_PostReleaseRequestState(object sender, EventArgs e)
+		private void context_PostMapRequestHandler(object sender, EventArgs e)
 		{
 			var context = sender as HttpApplication;
 			var executionPath = context.Request.CurrentExecutionFilePath;

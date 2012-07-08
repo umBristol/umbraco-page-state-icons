@@ -50,8 +50,7 @@
 	<!-- PREPAIRE FILES -->
 	<Target Name="PrepairFiles" DependsOnTargets="Compile">
 		<ItemGroup>
-			<BinFiles Include="$(ProjectDir)\Bin\*.dll" />
-			<BinFiles Include="$(ProjectDir)\Bin\*.xml" />
+			<BinFiles Include="$(ProjectDir)\Bin\Release\*.dll" />
 			<ConfigFiles Include="$(ProjectDir)\Config\PageStateIcons.config" />
 			<PluginFiles Include="$(ProjectDir)\Umbraco\Plugins\PageStateIcons\*.ashx" />
 			<ImageFiles Include="$(ProjectDir)\Umbraco\Plugins\PageStateIcons\*.png" />
