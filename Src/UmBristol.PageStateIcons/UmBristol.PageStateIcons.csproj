@@ -41,12 +41,15 @@
   <ItemGroup>
     <Reference Include="businesslogic">
       <HintPath>..\..\Lib\businesslogic.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="cms">
       <HintPath>..\..\Lib\cms.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="interfaces">
       <HintPath>..\..\Lib\interfaces.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\Lib\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -54,19 +57,13 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="umbraco">
       <HintPath>..\..\Lib\umbraco.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
