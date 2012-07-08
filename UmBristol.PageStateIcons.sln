@@ -12,6 +12,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Package", "Build Pack
 		Package.xml = Package.xml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Umbraco Assemblies", "Umbraco Assemblies", "{04F1C33F-EF3D-4F85-90B6-D258F06752D7}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\businesslogic.dll = Lib\businesslogic.dll
+		Lib\ClientDependency.Core.dll = Lib\ClientDependency.Core.dll
+		Lib\cms.dll = Lib\cms.dll
+		Lib\controls.dll = Lib\controls.dll
+		Lib\interfaces.dll = Lib\interfaces.dll
+		Lib\umbraco.DataLayer.dll = Lib\umbraco.DataLayer.dll
+		Lib\umbraco.dll = Lib\umbraco.dll
+		Lib\umbraco.editorControls.dll = Lib\umbraco.editorControls.dll
+		Lib\umbraco.MacroEngines.dll = Lib\umbraco.MacroEngines.dll
+		Lib\umbraco.macroRenderings.dll = Lib\umbraco.macroRenderings.dll
+		Lib\umbraco.providers.dll = Lib\umbraco.providers.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,5 +43,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0F945291-F264-44AF-9C6A-B1BB0B9E785E} = {C0A8BDDE-A89F-4341-8912-A7C05E5CC25F}
+		{04F1C33F-EF3D-4F85-90B6-D258F06752D7} = {C0A8BDDE-A89F-4341-8912-A7C05E5CC25F}
 	EndGlobalSection
 EndGlobal
