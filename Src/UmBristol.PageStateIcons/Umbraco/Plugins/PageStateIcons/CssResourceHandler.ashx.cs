@@ -38,7 +38,9 @@ namespace UmBristol.PageStateIcons
                 sb.AppendFormat("top: {0}px; ", rule.Top);
                 sb.AppendFormat("background: no-repeat url(\"{0}\") 0 0; ", rule.OverlayIconPath);
                 sb.AppendFormat("z-index: {0}", zindex);
-                sb.Append("}");
+
+				sb.AppendFormat("_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='{0}'); ", rule.OverlayIconPath);
+				sb.Append("}");
                 sb.AppendLine(string.Empty);
             }
 
