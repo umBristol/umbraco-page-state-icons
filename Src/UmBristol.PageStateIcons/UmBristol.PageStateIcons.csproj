@@ -83,6 +83,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Umbraco\Plugins\PageStateIcons\umbracoNaviHide.png" />
+    <Content Include="Umbraco\Plugins\PageStateIcons\umbracoRedirect.png" />
     <None Include="Config\ConfigurationSection.csd">
       <Generator>CsdFileGenerator</Generator>
       <LastGenOutput>ConfigurationSection.csd.cs</LastGenOutput>
