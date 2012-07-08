@@ -6,3 +6,4 @@ Build/*
 *.csproj.user
 *.suo
 *.user
+Src/Umbraco/*
