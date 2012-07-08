@@ -53,16 +53,14 @@
 			<BinFiles Include="$(ProjectDir)\Bin\*.dll" />
 			<BinFiles Include="$(ProjectDir)\Bin\*.xml" />
 			<ConfigFiles Include="$(ProjectDir)\Config\*.config" />
+			<PluginFiles Include="$(ProjectDir)\Umbraco\Plugins\PageStateIcons\*.ashx" />
 			<ImageFiles Include="$(ProjectDir)\Umbraco\Plugins\PageStateIcons\*.png" />
-			<ScriptFiles Include="$(ProjectDir)\Umbraco\Plugins\PageStateIcons\*.js" />
-			<StyleFiles Include="$(ProjectDir)\Umbraco\Plugins\PageStateIcons\*.css" />
 			<PackageFile Include="$(RootDir)\Package.xml" />
 		</ItemGroup>
 		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(BuildDir)\bin" />
 		<Copy SourceFiles="@(ConfigFiles)" DestinationFolder="$(BuildDir)\config" />
+		<Copy SourceFiles="@(PluginFiles)" DestinationFolder="$(BuildDir)\umbraco\plugins\PageStateIcons" />
 		<Copy SourceFiles="@(ImageFiles)" DestinationFolder="$(BuildDir)\umbraco\plugins\PageStateIcons" />
-		<Copy SourceFiles="@(ScriptFiles)" DestinationFolder="$(BuildDir)\umbraco\plugins\PageStateIcons" />
-		<Copy SourceFiles="@(StyleFiles)" DestinationFolder="$(BuildDir)\umbraco\plugins\PageStateIcons" />
 		<Copy SourceFiles="@(PackageFile)" DestinationFolder="$(BuildDir)" />
 	</Target>
 
