@@ -344,58 +344,6 @@ namespace UmBristol.PageStateIcons.Config
         }
         #endregion
         
-        #region IconPath Property
-        /// <summary>
-        /// The XML name of the <see cref="IconPath"/> property.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string IconPathPropertyName = "iconPath";
-        
-        /// <summary>
-        /// Gets or sets the IconPath.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("The IconPath.")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::UmBristol.PageStateIcons.Config.RuleElement.IconPathPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false)]
-        public virtual string IconPath
-        {
-            get
-            {
-                return ((string)(base[global::UmBristol.PageStateIcons.Config.RuleElement.IconPathPropertyName]));
-            }
-            set
-            {
-                base[global::UmBristol.PageStateIcons.Config.RuleElement.IconPathPropertyName] = value;
-            }
-        }
-        #endregion
-        
-        #region CssClass Property
-        /// <summary>
-        /// The XML name of the <see cref="CssClass"/> property.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        internal const string CssClassPropertyName = "cssClass";
-        
-        /// <summary>
-        /// Gets or sets the CssClass.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("ConfigurationSectionDesigner.CsdFileGenerator", "2.0.0.5")]
-        [global::System.ComponentModel.DescriptionAttribute("The CssClass.")]
-        [global::System.Configuration.ConfigurationPropertyAttribute(global::UmBristol.PageStateIcons.Config.RuleElement.CssClassPropertyName, IsRequired=false, IsKey=false, IsDefaultCollection=false)]
-        public virtual string CssClass
-        {
-            get
-            {
-                return ((string)(base[global::UmBristol.PageStateIcons.Config.RuleElement.CssClassPropertyName]));
-            }
-            set
-            {
-                base[global::UmBristol.PageStateIcons.Config.RuleElement.CssClassPropertyName] = value;
-            }
-        }
-        #endregion
-        
         #region OverlayIconPath Property
         /// <summary>
         /// The XML name of the <see cref="OverlayIconPath"/> property.

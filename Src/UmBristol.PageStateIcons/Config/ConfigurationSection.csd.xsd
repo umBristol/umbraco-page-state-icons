@@ -40,16 +40,6 @@
 				<xs:documentation>The XPath.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="iconPath" use="optional" type="xs:string">
-			<xs:annotation>
-				<xs:documentation>The IconPath.</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
-		<xs:attribute name="cssClass" use="optional" type="xs:string">
-			<xs:annotation>
-				<xs:documentation>The CssClass.</xs:documentation>
-			</xs:annotation>
-		</xs:attribute>
 		<xs:attribute name="overlayIconPath" use="optional" type="xs:string">
 			<xs:annotation>
 				<xs:documentation>The OverlayIconPath.</xs:documentation>

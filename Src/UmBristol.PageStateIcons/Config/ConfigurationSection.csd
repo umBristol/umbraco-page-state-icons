@@ -37,16 +37,6 @@
             <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
           </type>
         </attributeProperty>
-        <attributeProperty name="IconPath" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="iconPath" isReadOnly="false">
-          <type>
-            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
-          </type>
-        </attributeProperty>
-        <attributeProperty name="CssClass" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="cssClass" isReadOnly="false">
-          <type>
-            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
-          </type>
-        </attributeProperty>
         <attributeProperty name="OverlayIconPath" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="overlayIconPath" isReadOnly="false">
           <type>
             <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
