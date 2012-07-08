@@ -99,10 +99,8 @@
       <DependentUpon>ConfigurationSection.csd</DependentUpon>
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Config\UmBristol.PageStateIcons.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="Umbraco\Plugins\PageStateIcons\CssResourceHandler.ashx" />
+    <Content Include="Config\PageStateIcons.config" />
     <None Include="web.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
