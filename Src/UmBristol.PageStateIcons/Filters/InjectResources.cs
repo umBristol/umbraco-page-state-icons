@@ -29,7 +29,12 @@ namespace UmBristol.PageStateIcons.Filters
 			this.HtmlStyles.AppendFormat("<link type='text/css' rel='stylesheet' href='{0}/{1}' />", GlobalSettings.Path, "plugins/PageStateIcons/CssResourceHandler.ashx").AppendLine();
 
 			// JavaScript resources
-			////this.HtmlScripts.AppendFormat("<script type='text/javascript' src='{0}/{1}'></script>", GlobalSettings.Path, "plugins/PageStateIcons/JsResourceHandler.ashx").AppendLine();
+			//this.HtmlScripts.AppendFormat("<script type='text/javascript' src='{0}/{1}'></script>", GlobalSettings.Path, "plugins/PageStateIcons/JsResourceHandler.ashx").AppendLine();
+			string treeInjection = "";
+
+			treeInjection += "<script type='text/javascript'>";
+			treeInjection += "</script>";
+
 
 			this.HtmlScripts.AppendLine(HtmlBodyClosing);
 			this.HtmlStyles.AppendLine(HtmlHeadClosing);
