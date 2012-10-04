@@ -77,6 +77,7 @@
     <Compile Include="Modules\RegisterClientResources.cs" />
     <Compile Include="PackageActions\AddConfigSection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\VersionInfo.cs" />
     <Compile Include="Umbraco\Plugins\PageStateIcons\CssResourceHandler.ashx.cs">
       <DependentUpon>CssResourceHandler.ashx</DependentUpon>
     </Compile>
@@ -102,12 +103,6 @@
     <Content Include="Umbraco\Plugins\PageStateIcons\CssResourceHandler.ashx" />
     <Content Include="Config\PageStateIcons.config" />
     <None Include="web.config" />
-    <None Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <None Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
