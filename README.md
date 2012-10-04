@@ -32,7 +32,9 @@ All of the attributes are **MANDATORY** and can be explained as follows...
 
 `xPath`: This is the expression which needs to match in order for the icon to display (this works against published and unpublished content)
 
-`overlayIconPath`: This is the path to the icon you wish to be displayed.
+`iconType`: This is the type of icon you want to use; the options are: 'overlay' or 'icon'.
+
+`iconPath`: This is the path to the icon you wish to be displayed.
 
 `left`: Pixels from the left of the `<li>` element that the icon should be placed.
 
