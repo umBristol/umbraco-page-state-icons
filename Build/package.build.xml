@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Package" ToolsVersion="4.0">
 
-	<!-- 
-  	****************************************
-  	* IMPORTS
-	****************************************
-  -->
+	<!-- IMPORTS -->
 	<PropertyGroup>
-		<MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\Tools\MSBuildCommunityTasks</MSBuildCommunityTasksPath>
-		<MSBuildUmbracoTasksPath>$(MSBuildProjectDirectory)\Tools\MSBuildUmbracoTasks</MSBuildUmbracoTasksPath>
+		<MSBuildCustomTasksPath>$(MSBuildProjectDirectory)\..\Tools</MSBuildCustomTasksPath>
+		<MSBuildCommunityTasksPath>$(MSBuildCustomTasksPath)\MSBuildCommunityTasks</MSBuildCommunityTasksPath>
+		<MSBuildUmbracoTasksPath>$(MSBuildCustomTasksPath)\MSBuildUmbracoTasks</MSBuildUmbracoTasksPath>
 	</PropertyGroup>
 
 	<Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.Targets" />
 	<Import Project="$(MSBuildUmbracoTasksPath)\MSBuild.Umbraco.Tasks.Targets" />
 
-	<!-- 
-  	****************************************
-  	* PROPERTIES
-	****************************************
-  -->
+	<!-- PROPERTIES -->
 	<PropertyGroup>
 		<VersionMajor>2</VersionMajor>
 		<VersionMinor>0</VersionMinor>
@@ -27,24 +20,18 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<RootDir>$(MSBuildProjectDirectory)</RootDir>
-		<BuildDir>$(RootDir)\Build</BuildDir>
-		<PackageDir>$(BuildDir)</PackageDir>
+		<RootDir>$(MSBuildProjectDirectory)\..</RootDir>
+		<BuildDir>$(MSBuildProjectDirectory)\Temp</BuildDir>
+		<PackageDir>$(MSBuildProjectDirectory)</PackageDir>
 		<ProjectDir>$(RootDir)\Src\UmBristol.PageStateIcons</ProjectDir>
 	</PropertyGroup>
 
-	<!-- 
-  	****************************************
-  	* TARGETS
-	****************************************
-  -->
+	<!-- TARGETS -->
 
 	<!-- CLEAN -->
 	<Target Name="Clean">
 		<RemoveDir Directories="$(BuildDir)" Condition="Exists('$(BuildDir)')" />
-		<RemoveDir Directories="$(PackageDir)" Condition="Exists('$(PackageDir)')" />
 		<MakeDir Directories="$(BuildDir)" />
-		<MakeDir Directories="$(PackageDir)" />
 	</Target>
 
 	<!-- UPDATE ASSEMBLEY VERSION -->
@@ -62,7 +49,7 @@
 
 	<!-- COMPILE -->
 	<Target Name="Compile" DependsOnTargets="UpdateAssemblyInfo">
-		<MSBuild Projects="$(ProjectDir)\UmBristol.PageStateIcons.csproj" Properties="Configuration=Release" />
+		<MSBuild Projects="$(RootDir)\UmBristol.PageStateIcons.sln" Properties="Configuration=Release" />
 	</Target>
 
 	<!-- PREPAIRE FILES -->
@@ -72,7 +59,7 @@
 			<ConfigFiles Include="$(ProjectDir)\Config\PageStateIcons.config" />
 			<PluginFiles Include="$(ProjectDir)\Umbraco\Plugins\PageStateIcons\*.ashx" />
 			<ImageFiles Include="$(ProjectDir)\Umbraco\Plugins\PageStateIcons\*.png" />
-			<PackageFile Include="$(RootDir)\Package.xml" />
+			<PackageFile Include="$(PackageDir)\package.xml" />
 		</ItemGroup>
 		<Copy SourceFiles="@(BinFiles)" DestinationFolder="$(BuildDir)\bin" />
 		<Copy SourceFiles="@(ConfigFiles)" DestinationFolder="$(BuildDir)\config" />
@@ -86,10 +73,14 @@
 		<ItemGroup>
 			<ManifestFiles Include="$(BuildDir)\**\*" Exclude="$(BuildDir)\Package.xml" />
 		</ItemGroup>
+		<ReadLinesFromFile File="$(PackageDir)\readme.txt">
+			<Output TaskParameter="Lines" ItemName="Readme" />
+		</ReadLinesFromFile>
 		<ManifestUpdate ManifestFile="$(BuildDir)\Package.xml"
 			WorkingDirectory="$(BuildDir)"
 			MinimumRequiredUmbracoVersion="4.7.0"
 			PackageVersion="$(VersionMajor).$(VersionMinor).$(VersionPatch)$(VersionSuffix)"
+			Readme="@(Readme->'%(Identity)', '%0a%0d')"
 			Files="@(ManifestFiles)" />
 	</Target>
 
@@ -98,10 +89,11 @@
 		<ItemGroup>
 			<PackageFiles Include="$(BuildDir)\**\*.*" />
 		</ItemGroup>
-		<Package ManifestFile="$(BuildDir)\Package.xml"
-		   WorkingDirectory="$(BuildDir)"
-		   OutputDirectory="$(PackageDir)"
-		   Files="@(PackageFiles)" />
+		<Package ManifestFile="$(BuildDir)\package.xml"
+			WorkingDirectory="$(BuildDir)"
+			OutputDirectory="$(PackageDir)"
+			Files="@(PackageFiles)" />
+		<RemoveDir Directories="$(BuildDir)" Condition="Exists('$(BuildDir)')" />
 	</Target>
 
 </Project>
