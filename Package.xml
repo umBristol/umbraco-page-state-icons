@@ -3,12 +3,12 @@
 	<info>
 		<package>
 			<name>Page State Icons</name>
-			<version>1.0.0</version>
+			<version>0.0.0</version>
 			<license url="http://www.opensource.org/licenses/mit-license.php">MIT license</license>
 			<url>http://our.umbraco.org/projects/backoffice-extensions/page-state-icons</url>
 			<requirements>
-				<major>4</major>
-				<minor>7</minor>
+				<major>0</major>
+				<minor>0</minor>
 				<patch>0</patch>
 			</requirements>
 		</package>
@@ -29,7 +29,8 @@ The package allows site admins to add new icons and configure rules (including X
 
  
 
-This package was created at the inaugural umBristol hack-day! (gert lush)]]></readme>
+This package was created at the inaugural umBristol hack-day! (gert lush)]]>
+		</readme>
 	</info>
 	<DocumentTypes />
 	<Templates />
