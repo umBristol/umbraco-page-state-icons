@@ -5,9 +5,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Package", "Build Package", "{0F945291-F264-44AF-9C6A-B1BB0B9E785E}"
 	ProjectSection(SolutionItems) = preProject
-		Package.build.cmd = Package.build.cmd
-		Package.build.xml = Package.build.xml
-		Package.xml = Package.xml
+		Build\package.build.cmd = Build\package.build.cmd
+		Build\package.build.xml = Build\package.build.xml
+		Build\package.xml = Build\package.xml
+		Build\readme.txt = Build\readme.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Umbraco Assemblies", "Umbraco Assemblies", "{04F1C33F-EF3D-4F85-90B6-D258F06752D7}"
