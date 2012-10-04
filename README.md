@@ -20,7 +20,8 @@ You will find the config file at `/config/PageStateIcons.config` and the rules n
 	<add name="umbracoNaviHide"
 		 description="Adds overlay to show the page is hidden from navigation."
 		 xPath="umbracoNaviHide = '1'"
-		 overlayIconPath="/Umbraco/Plugins/PageStateIcons/UmbracoNaviHide.png"
+		 iconType="overlay"
+		 iconPath="/Umbraco/Plugins/PageStateIcons/UmbracoNaviHide.png"
 		 left="11"
 		 top="7" />
 
