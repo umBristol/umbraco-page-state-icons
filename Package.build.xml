@@ -7,9 +7,11 @@
 	****************************************
   -->
 	<PropertyGroup>
+		<MSBuildCommunityTasksPath>$(MSBuildProjectDirectory)\Tools\MSBuildCommunityTasks</MSBuildCommunityTasksPath>
 		<MSBuildUmbracoTasksPath>$(MSBuildProjectDirectory)\Tools\MSBuildUmbracoTasks</MSBuildUmbracoTasksPath>
 	</PropertyGroup>
 
+	<Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.Targets" />
 	<Import Project="$(MSBuildUmbracoTasksPath)\MSBuild.Umbraco.Tasks.Targets" />
 
 	<!-- 
@@ -18,7 +20,10 @@
 	****************************************
   -->
 	<PropertyGroup>
-		<PackageVersion>1.0.0</PackageVersion>
+		<VersionMajor>2</VersionMajor>
+		<VersionMinor>0</VersionMinor>
+		<VersionPatch>0</VersionPatch>
+		<VersionSuffix>-alpha</VersionSuffix>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -42,8 +47,21 @@
 		<MakeDir Directories="$(PackageDir)" />
 	</Target>
 
+	<!-- UPDATE ASSEMBLEY VERSION -->
+	<Target Name="UpdateAssemblyInfo" DependsOnTargets="Clean">
+		<Version Major="$(VersionMajor)" Minor="$(VersionMinor)" BuildType="Automatic" RevisionType="Automatic" StartDate="08/07/2012">
+			<Output TaskParameter="Build" PropertyName="Build" />
+			<Output TaskParameter="Revision" PropertyName="Revision" />
+		</Version>
+		<AssemblyInfo CodeLanguage="CS"
+			OutputFile="$(ProjectDir)\Properties\VersionInfo.cs"
+			AssemblyVersion="$(VersionMajor).$(VersionMinor).$(VersionPatch)"
+			AssemblyFileVersion="$(VersionMajor).$(VersionMinor).$(Build).$(Revision)"
+			AssemblyInformationalVersion="$(VersionMajor).$(VersionMinor).$(VersionPatch)$(VersionSuffix)"/>
+	</Target>
+
 	<!-- COMPILE -->
-	<Target Name="Compile" DependsOnTargets="Clean">
+	<Target Name="Compile" DependsOnTargets="UpdateAssemblyInfo">
 		<MSBuild Projects="$(ProjectDir)\UmBristol.PageStateIcons.csproj" Properties="Configuration=Release" />
 	</Target>
 
@@ -70,7 +88,8 @@
 		</ItemGroup>
 		<ManifestUpdate ManifestFile="$(BuildDir)\Package.xml"
 			WorkingDirectory="$(BuildDir)"
-			PackageVersion="$(PackageVersion)"
+			MinimumRequiredUmbracoVersion="4.7.0"
+			PackageVersion="$(VersionMajor).$(VersionMinor).$(VersionPatch)$(VersionSuffix)"
 			Files="@(ManifestFiles)" />
 	</Target>
 
