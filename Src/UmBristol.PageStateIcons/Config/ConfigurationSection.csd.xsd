@@ -40,9 +40,9 @@
 				<xs:documentation>The XPath.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="overlayIconPath" use="optional" type="xs:string">
+		<xs:attribute name="iconPath" use="optional" type="xs:string">
 			<xs:annotation>
-				<xs:documentation>The OverlayIconPath.</xs:documentation>
+				<xs:documentation>The IconPath.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="description" use="optional" type="xs:string">
@@ -60,5 +60,27 @@
 				<xs:documentation>The Left.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
+		<xs:attribute name="iconType" use="optional" type="tns:IconType">
+			<xs:annotation>
+				<xs:documentation>The IconType.</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
 	</xs:complexType>
+	<xs:simpleType name="IconType">
+		<xs:annotation>
+			<xs:documentation>IconType.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="overlay">
+				<xs:annotation>
+					<xs:documentation>overlay.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="icon">
+				<xs:annotation>
+					<xs:documentation>icon.</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 </xs:schema>
