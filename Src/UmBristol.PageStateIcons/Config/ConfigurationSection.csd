@@ -9,6 +9,12 @@
     <externalType name="Double" namespace="System" />
     <externalType name="DateTime" namespace="System" />
     <externalType name="TimeSpan" namespace="System" />
+    <enumeratedType name="IconType" namespace="UmBristol.PageStateIcons.Config">
+      <literals>
+        <enumerationLiteral name="overlay" />
+        <enumerationLiteral name="icon" />
+      </literals>
+    </enumeratedType>
   </typeDefinitions>
   <configurationElements>
     <configurationSection name="PageStateIconsConfigurationSection" codeGenOptions="Singleton, XmlnsProperty" xmlSectionName="pageStateIconsConfigurationSection">
@@ -37,7 +43,7 @@
             <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
           </type>
         </attributeProperty>
-        <attributeProperty name="OverlayIconPath" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="overlayIconPath" isReadOnly="false">
+        <attributeProperty name="IconPath" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="iconPath" isReadOnly="false">
           <type>
             <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
           </type>
@@ -55,6 +61,11 @@
         <attributeProperty name="Left" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="left" isReadOnly="false">
           <type>
             <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/Int32" />
+          </type>
+        </attributeProperty>
+        <attributeProperty name="IconType" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="iconType" isReadOnly="false" typeConverter="GenericEnumConverter" defaultValue="overlay">
+          <type>
+            <enumeratedTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/IconType" />
           </type>
         </attributeProperty>
       </attributeProperties>
